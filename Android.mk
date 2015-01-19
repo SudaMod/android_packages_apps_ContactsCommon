@@ -38,7 +38,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v4 \
     libphonenumber \
     libgeocoding \
-    libMoKeePinYin
+    libSudaPinYin
 
 LOCAL_PACKAGE_NAME := com.android.contacts.common
 

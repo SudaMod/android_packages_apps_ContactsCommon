@@ -38,7 +38,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v4 \
     libphonenumber \
     libgeocoding \
-    libSudaPinYin
+    libSudaPinYin \
+    contacts-picaso
 
 LOCAL_PACKAGE_NAME := com.android.contacts.common
 
@@ -52,7 +53,8 @@ include $(CLEAR_VARS)
 # Open-source libphonenumber libraries as found in code.google.com/p/libphonenumber
 LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := \
    libphonenumber:libs/libphonenumber-6.2.jar \
-   libgeocoding:libs/geocoder-2.9.jar
+   libgeocoding:libs/geocoder-2.9.jar \
+   contacts-picaso:libs/picaso.jar
 
 include $(BUILD_MULTI_PREBUILT)
 

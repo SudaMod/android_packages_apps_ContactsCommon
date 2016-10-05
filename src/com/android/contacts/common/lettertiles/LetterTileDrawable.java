@@ -185,10 +185,10 @@ public class LetterTileDrawable extends Drawable {
             canvas.drawText(sFirstChar, 0, 1, bounds.centerX(),
                     bounds.centerY() + mOffset * bounds.height() - sRect.exactCenterY(),
                     sPaint);
-        } else if (mDisplayName != null && PinyinHelper.matchesCheck(mDisplayName.charAt(0))) {
+        } else if (mLetter != null && PinyinHelper.matchesCheck(mLetter)) {
             // Draw letter/digit only if the first character is a chinese letter
             // Draw letter or digit.
-            sFirstChar[0] = Character.toUpperCase(mDisplayName.charAt(0));
+            sFirstChar[0] = Character.toUpperCase(mLetter);
 
             // Scale text by canvas bounds and user selected scaling factor
             sPaint.setTextSize(mScale * sLetterToTileRatio * minDimension * 0.8f);

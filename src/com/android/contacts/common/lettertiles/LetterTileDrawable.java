@@ -188,7 +188,7 @@ public class LetterTileDrawable extends Drawable {
         } else if (mLetter != null && PinyinHelper.matchesCheck(mLetter)) {
             // Draw letter/digit only if the first character is a chinese letter
             // Draw letter or digit.
-            sFirstChar[0] = Character.toUpperCase(mLetter);
+            sFirstChar[0] = mLetter;
 
             // Scale text by canvas bounds and user selected scaling factor
             sPaint.setTextSize(mScale * sLetterToTileRatio * minDimension * 0.8f);
@@ -322,7 +322,7 @@ public class LetterTileDrawable extends Drawable {
     public LetterTileDrawable setLetterAndColorFromContactDetails(final String displayName,
             final String identifier) {
         if (displayName != null && displayName.length() > 0
-                && isEnglishLetter(displayName.charAt(0))) {
+                && (isEnglishLetter(displayName.charAt(0)) || PinyinHelper.matchesCheck(displayName.charAt(0)))) {
             mLetter = Character.toUpperCase(displayName.charAt(0));
         }else{
             mLetter = null;
